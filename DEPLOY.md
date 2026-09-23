@@ -1,15 +1,15 @@
 # 部署文档（当前架构）
 
 ```
-GitHub 仓库 (yutter2024/AI-Blog)
+GitHub 仓库 (yutter2024/Daily-Blog)
    ├── 主线托管: Cloudflare Pages → https://yutterx.com
-   └── 备用托管: GitHub Pages (Actions) → https://yutter2024.github.io/AI-Blog/
+   └── 备用托管: GitHub Pages (Actions) → https://yutter2024.github.io/Daily-Blog/
 ```
 
 ## Cloudflare Pages（主）
 
 1. https://dash.cloudflare.com → **Workers 和 Pages** → 创建 → Pages → 连接到 Git
-2. 选择仓库 yutter2024/AI-Blog，构建配置：
+2. 选择仓库 yutter2024/Daily-Blog，构建配置：
    - 框架预设：Hugo
    - 构建命令：`hugo --minify`
    - 输出目录：`public`

@@ -1,4 +1,4 @@
 ---
-title: "Yutter的 AI 笔记"
-description: "记录 AI、LLM、Agent 与个人折腾"
+title: "Yutter的日常"
+description: "记录日常、AI、教程与折腾的个人博客"
 ---

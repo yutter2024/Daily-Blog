@@ -1,11 +1,12 @@
 baseURL: "https://yutterx.com/"
-title: "Yutter的 AI 笔记"
-description: "记录 AI、LLM、Agent 与个人折腾"
+title: "Yutter的日常"
+description: "记录日常、AI、教程与折腾的个人博客"
 keywords:
+  - 个人博客
+  - 日常
   - AI
-  - LLM
-  - Agent
-  - 大模型
+  - 教程
+  - 折腾
 author: "Yutter"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh-cn"
@@ -14,7 +15,7 @@ theme: "PaperMod"
 
 params:
   env: production
-  description: "记录 AI、LLM、Agent 与个人折腾"
+  description: "记录日常、AI、教程与折腾的个人博客"
   author: "Yutter"
   DateFormat: "2006-01-02"
   defaultTheme: auto
@@ -35,17 +36,17 @@ params:
   homeInfoParams:
     Title: "你好，我是Yutter 👋"
     Content: |
-      这里是我的 AI 技术笔记。
+      这里是我的个人博客。
 
-      记录大模型、Agent、自动化工具，以及每一次真实的折腾与复盘。
+      记录日常、AI、教程与折腾，什么都写一点。
   profileMode:
     enabled: true
     title: "你好，我是 Yutter 👋"
     subtitle: |
-      AI 折腾者 · 工具控
+      记录日常，顺带折腾。
 
-      把 AI 工具真正跑起来，
-      再把过程写成别人能照着做的教程。
+      把日常、想法和折腾过的东西写下来，
+      偶尔也整理成能照着做的教程。
     imageUrl: "avatar.png"
     imageTitle: "Yutter"
     imageWidth: 128
@@ -53,15 +54,15 @@ params:
     buttons:
       - name: 从这里开始
         url: /start/
-      - name: 看我的实测教程
-        url: /categories/建站教程/
+      - name: 翻翻文章
+        url: /posts/
   socialIcons:
     - name: github
       url: "https://github.com/yutter2024"
     - name: email
       url: "mailto:yutter@yutterx.com"
   label:
-    text: "Yutter的 AI 笔记"
+    text: "Yutter的日常"
     icon: "/favicon.svg"
     iconHeight: 28
 

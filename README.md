@@ -1,10 +1,10 @@
-# Yutter的 AI 笔记
+# Yutter的日常
 
-个人 AI 技术博客 —— 记录 AI 工具、教程与实测复盘。
+个人博客 —— 记录日常、AI、教程与折腾。
 
 **[🌐 线上访问：yutterx.com](https://yutterx.com)**
 
-[![Deploy](https://github.com/yutter2024/AI-Blog/actions/workflows/hugo.yml/badge.svg)](https://github.com/yutter2024/AI-Blog/actions/workflows/hugo.yml)
+[![Deploy](https://github.com/yutter2024/Daily-Blog/actions/workflows/hugo.yml/badge.svg)](https://github.com/yutter2024/Daily-Blog/actions/workflows/hugo.yml)
 ![Hugo](https://img.shields.io/badge/Hugo-0.165.0-ff4088?logo=hugo&logoColor=white)
 ![Theme](https://img.shields.io/badge/Theme-PaperMod-0a84ff)
 ![Hosting](https://img.shields.io/badge/Hosting-Cloudflare%20Pages-f38020?logo=cloudflare&logoColor=white)
@@ -14,7 +14,7 @@
 | 站点 | 地址 | 说明 |
 |---|---|---|
 | 主站 | [yutterx.com](https://yutterx.com) | Cloudflare Pages · 推送 `main` 自动部署 |
-| 备用 | [yutter2024.github.io/AI-Blog](https://yutter2024.github.io/AI-Blog/) | GitHub Pages · 仅 fallback |
+| 备用 | [yutter2024.github.io/Daily-Blog](https://yutter2024.github.io/Daily-Blog/) | GitHub Pages · 仅 fallback |
 
 ## 📝 写新文章
 

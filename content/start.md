@@ -4,7 +4,7 @@ description: "第一次来？按这个顺序读，10 分钟了解这个站"
 slug: "start"
 ---
 
-欢迎来到 Yutter 的 AI 笔记。这里不追求最新，只记录**真实折腾过**的东西。
+欢迎来到「Yutter的日常」。这里什么都会写一点，不追求最新，只记录**真实**的东西。
 
 <div class="route-card">
   <div class="route-head">🧰 工具党路线 <span class="route-tag">推荐先读</span></div>
