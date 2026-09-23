@@ -1,15 +1,15 @@
 # 部署文档（当前架构）
 
 ```
-GitHub 仓库 (yutter2024/xiaozb.online)
+GitHub 仓库 (yutter2024/AI-Blog)
    ├── 主线托管: Cloudflare Pages → https://yutterx.com
-   └── 备用托管: GitHub Pages (Actions) → https://yutter2024.github.io/xiaozb.online/
+   └── 备用托管: GitHub Pages (Actions) → https://yutter2024.github.io/AI-Blog/
 ```
 
 ## Cloudflare Pages（主）
 
 1. https://dash.cloudflare.com → **Workers 和 Pages** → 创建 → Pages → 连接到 Git
-2. 选择仓库 yutter2024/xiaozb.online，构建配置：
+2. 选择仓库 yutter2024/AI-Blog，构建配置：
    - 框架预设：Hugo
    - 构建命令：`hugo --minify`
    - 输出目录：`public`
@@ -34,4 +34,4 @@ GitHub 仓库 (yutter2024/xiaozb.online)
 ## 注意事项
 
 - `hugo.yaml` 中 `baseURL` 是主域名，改域名需同步改这里
-- 主题 PaperMod 已直接入库（不再用 submodule），升主题 = 直接 git pull 上游对比替换
+- 主题 PaperMod 已直接入库（不再用 submodule），且 `layouts/` 含本地定制；升级时先对比上游，勿整目录覆盖
