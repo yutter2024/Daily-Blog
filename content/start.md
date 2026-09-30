@@ -22,6 +22,7 @@ slug: "start"
   <p class="route-desc">从"会用 AI"到"知道该用哪个工具"。</p>
   <ol class="route-list">
     <li><a href="/posts/agent-101/">AI Agent 入门：从 LLM 到能办事的助手</a><span class="route-note">写给程序员的 Agent 入门笔记</span></li>
+    <li><a href="/posts/hermes-docs-summary/">Hermes Agent 官方文档中文摘要</a><span class="route-note">1055 页官方文档浓缩成一篇</span></li>
     <li><a href="/posts/tech-tools/">科技杂谈：常用网站和 App 清单</a><span class="route-note">从日常到 AI 的实用工具地图</span></li>
   </ol>
 </div>
