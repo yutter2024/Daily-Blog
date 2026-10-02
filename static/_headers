@@ -1,3 +1,9 @@
 # Cache only fingerprinted assets; HTML stays dynamic so new posts appear instantly.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=2592000
+
+/*
+  Strict-Transport-Security: max-age=15552000; includeSubDomains
