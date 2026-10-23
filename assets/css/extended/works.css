@@ -1,0 +1,74 @@
+/* 作品页：卡片网格（只用 clamp，不用 @media） */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: clamp(16px, 3vw, 28px);
+  margin: 2rem 0 3rem;
+}
+
+.work-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.work-thumb {
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--theme);
+}
+
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.work-card:hover .work-thumb img {
+  transform: scale(1.03);
+}
+
+.work-body {
+  padding: 13px 16px 17px;
+}
+
+.work-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.work-type {
+  text-transform: uppercase;
+}
+
+.work-title {
+  font-size: 1.02rem;
+  margin: 0 0 6px;
+  line-height: 1.35;
+}
+
+.work-title a {
+  color: var(--primary);
+}
+
+.work-note {
+  font-size: 0.86rem;
+  color: var(--secondary);
+  margin: 0;
+  line-height: 1.55;
+}

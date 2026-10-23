@@ -76,6 +76,10 @@ menu:
       name: 文章
       url: /posts/
       weight: 10
+    - identifier: works
+      name: 作品
+      url: /works/
+      weight: 12
     - identifier: categories
       name: 分类
       url: /categories/

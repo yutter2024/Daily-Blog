@@ -1,0 +1,26 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
+</header>
+
+<section class="works-grid">
+  {{ range site.Data.works.items }}
+  <article class="work-card">
+    <a class="work-thumb" href="{{ .link | relURL }}" aria-label="{{ .title }}">
+      <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
+    </a>
+    <div class="work-body">
+      <div class="work-meta">
+        <span class="work-type">{{ .type }}</span>
+        <span class="work-date">{{ .date }}</span>
+      </div>
+      <h2 class="work-title"><a href="{{ .link | relURL }}">{{ .title }}</a></h2>
+      {{- with .note }}<p class="work-note">{{ . }}</p>{{ end }}
+    </div>
+  </article>
+  {{ end }}
+</section>
+
+{{- end }}
