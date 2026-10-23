@@ -5,29 +5,24 @@
   {{- with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
 </header>
 
-<section class="works-grid">
-  {{ range site.Data.works.items }}
-  {{- $item := . }}
-  <article class="work-card">
-    <a class="work-thumb" href="{{ .link | relURL }}" aria-label="{{ .title }}">
-      <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
-      {{- with .preview }}
-      <video class="work-video" src="{{ . | relURL }}" poster="{{ $item.cover | relURL }}"
-             muted loop playsinline preload="none" aria-hidden="true"></video>
-      <span class="work-play" aria-hidden="true">▶</span>
-      {{- end }}
-    </a>
-    <div class="work-body">
-      <div class="work-meta">
-        <span class="work-type">{{ .type }}</span>
-        <span class="work-date">{{ .date }}</span>
-      </div>
-      <h2 class="work-title"><a href="{{ .link | relURL }}">{{ .title }}</a></h2>
-      {{- with .note }}<p class="work-note">{{ . }}</p>{{ end }}
-    </div>
-  </article>
-  {{ end }}
+{{- $sections := slice
+      (dict "key" "科普" "title" "AI 观察笔记 · 科普系列" "desc" "3–5 分钟，一期讲一个 AI 的认知缺陷。")
+      (dict "key" "短片" "title" "短片与实验" "desc" "竖屏、几十秒，练镜头和声音。")
+      (dict "key" "海报" "title" "海报" "desc" "AI 只画画面，中文靠排版。")
+-}}
+
+{{- range $sections }}
+{{- $items := where site.Data.works.items "series" .key }}
+{{- if $items }}
+<section class="works-series">
+  <h2 class="works-series-title">{{ .title }}</h2>
+  <p class="works-series-desc">{{ .desc }}</p>
 </section>
+<section class="works-grid">
+  {{- range $items }}{{ partial "works-card.html" . }}{{ end }}
+</section>
+{{- end }}
+{{- end }}
 
 <script>
 (() => {

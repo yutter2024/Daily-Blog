@@ -1,0 +1,22 @@
+{{- $item := . }}
+<article class="work-card">
+  {{- if .link }}<a class="work-thumb" href="{{ .link | relURL }}" aria-label="{{ .title }}">
+  {{- else }}<div class="work-thumb">{{ end }}
+    <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
+    {{- with .preview }}
+    <video class="work-video" src="{{ . | relURL }}" poster="{{ $item.cover | relURL }}"
+           muted loop playsinline preload="none" aria-hidden="true"></video>
+    <span class="work-play" aria-hidden="true">▶</span>
+    {{- end }}
+  {{- if .link }}</a>{{ else }}</div>{{ end }}
+  <div class="work-body">
+    <div class="work-meta">
+      <span class="work-type">{{ .type }}</span>
+      <span class="work-date">{{ .date }}</span>
+    </div>
+    <h2 class="work-title">
+      {{- if .link }}<a href="{{ .link | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end -}}
+    </h2>
+    {{- with .note }}<p class="work-note">{{ . }}</p>{{ end }}
+  </div>
+</article>

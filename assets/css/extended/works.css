@@ -1,9 +1,24 @@
-/* 作品页：卡片网格（只用 clamp，不用 @media） */
+/* 作品页：系列分组 + 卡片网格（只用 clamp，不用 @media） */
+.works-series {
+  margin: 2.4rem 0 1rem;
+}
+
+.works-series-title {
+  font-size: 1.12rem;
+  margin: 0 0 4px;
+}
+
+.works-series-desc {
+  font-size: 0.88rem;
+  color: var(--secondary);
+  margin: 0;
+}
+
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
   gap: clamp(16px, 3vw, 28px);
-  margin: 2rem 0 3rem;
+  margin: 1rem 0 2.4rem;
 }
 
 .work-card {
@@ -111,4 +126,102 @@
   color: var(--secondary);
   margin: 0;
   line-height: 1.55;
+}
+
+/* 首页：最近作品条 */
+.works-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 12px;
+}
+
+.works-strip-item {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--entry);
+  border: 1px solid var(--border);
+}
+
+.works-strip-item img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.works-strip-item span {
+  display: block;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+/* 分类家族页 */
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(14px, 2.5vw, 22px);
+  margin: 2rem 0 3rem;
+}
+
+.term-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+
+.term-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.term-head h2 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.term-count {
+  font-size: 0.74rem;
+  color: var(--secondary);
+}
+
+.term-desc {
+  font-size: 0.86rem;
+  color: var(--secondary);
+  margin: 6px 0 10px;
+  line-height: 1.55;
+}
+
+.term-latest {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+}
+
+.term-latest li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 0.84rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.term-latest li:last-child {
+  border-bottom: 0;
+}
+
+.term-latest a {
+  color: var(--primary);
+}
+
+.term-latest span {
+  color: var(--secondary);
+  font-size: 0.74rem;
+  white-space: nowrap;
 }

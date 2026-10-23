@@ -1,0 +1,30 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
+</header>
+
+<section class="term-grid">
+  {{- range .Data.Terms.ByCount }}
+  {{- $t := . }}
+  <article class="term-card">
+    <div class="term-head">
+      <h2>
+        <a href="{{ $t.Page.RelPermalink }}">
+          {{- with $t.Page.Params.emoji }}{{ . }} {{ end }}{{ $t.Page.LinkTitle }}
+        </a>
+      </h2>
+      <span class="term-count">{{ $t.Count }} 篇</span>
+    </div>
+    {{- with $t.Page.Params.description }}<p class="term-desc">{{ . }}</p>{{ end }}
+    <ul class="term-latest">
+      {{- range first 3 $t.Page.Pages.ByDate.Reverse }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span>{{ .Date.Format "01-02" }}</span></li>
+      {{- end }}
+    </ul>
+  </article>
+  {{- end }}
+</section>
+
+{{- end }}
