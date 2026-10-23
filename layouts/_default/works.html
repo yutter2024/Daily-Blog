@@ -7,9 +7,15 @@
 
 <section class="works-grid">
   {{ range site.Data.works.items }}
+  {{- $item := . }}
   <article class="work-card">
     <a class="work-thumb" href="{{ .link | relURL }}" aria-label="{{ .title }}">
       <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
+      {{- with .preview }}
+      <video class="work-video" src="{{ . | relURL }}" poster="{{ $item.cover | relURL }}"
+             muted loop playsinline preload="none" aria-hidden="true"></video>
+      <span class="work-play" aria-hidden="true">▶</span>
+      {{- end }}
     </a>
     <div class="work-body">
       <div class="work-meta">
@@ -22,5 +28,24 @@
   </article>
   {{ end }}
 </section>
+
+<script>
+(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.work-card').forEach((card) => {
+    const video = card.querySelector('video.work-video');
+    if (!video) return;
+    const play = () => { video.play().catch(() => {}); };
+    const stop = () => {
+      video.pause();
+      try { video.currentTime = 0; } catch (e) {}
+    };
+    card.addEventListener('pointerenter', play);
+    card.addEventListener('pointerleave', stop);
+    card.addEventListener('focusin', play);
+    card.addEventListener('focusout', stop);
+  });
+})();
+</script>
 
 {{- end }}

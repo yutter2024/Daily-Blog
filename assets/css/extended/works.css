@@ -20,6 +20,7 @@
 }
 
 .work-thumb {
+  position: relative;
   display: block;
   aspect-ratio: 3 / 4;
   overflow: hidden;
@@ -36,6 +37,45 @@
 
 .work-card:hover .work-thumb img {
   transform: scale(1.03);
+}
+
+/* hover 预览：视频层盖在封面上，默认透明 */
+.work-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.work-card:hover .work-video {
+  opacity: 1;
+}
+
+/* 右下角播放标记（提示这张卡有视频） */
+.work-play {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1px;
+  transition: opacity 0.25s ease;
+}
+
+.work-card:hover .work-play {
+  opacity: 0;
 }
 
 .work-body {
