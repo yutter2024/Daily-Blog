@@ -27,10 +27,13 @@
 ## 📚 内容索引
 
 <!-- POSTS:START -->
-> 共 **14** 篇 · 按发布时间倒序 · 本表由 `scripts/update_readme.py` 自动生成
+> 共 **17** 篇 · 按发布时间倒序 · 本表由 `scripts/update_readme.py` 自动生成
 
 | 日期 | 文章 | 分类 | 类型 |
 |---|---|---|---|
+| 2026-10-23 | [把博客、视频、海报都交给 AI：我的三条生产线](https://yutterx.com/posts/my-ai-workflow/) | AI与工具 | 复盘 |
+| 2026-10-23 | [AI 做海报的分工：画面交给模型，中文交给排版](https://yutterx.com/posts/ai-poster-workflow/) | AI与工具 | 教程 |
+| 2026-10-23 | [16 秒的 AI 短片：4 个镜头，从豆包到成片](https://yutterx.com/posts/ai-short-film-16s/) | AI与工具 | 教程 |
 | 2026-09-30 | [Hermes Agent 官方文档中文摘要](https://yutterx.com/posts/hermes-docs-summary/) | AI与工具 | 教程 |
 | 2026-09-18 | [英伟达发家史：从显卡到 AI 基础设施](https://yutterx.com/posts/nvidia-rising/) | 科技观察 | 复盘 |
 | 2026-09-14 | [DaVinci Resolve 21 保姆级使用教程：从安装到导出完整流程](https://yutterx.com/posts/davinci-resolve-21-beginner-guide/) | AI与工具 | 教程 |
