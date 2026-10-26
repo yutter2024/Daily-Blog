@@ -168,6 +168,15 @@
   display: block;
 }
 
+/* 首页作品条显示海报时：横版 16:9 */
+.works-strip--poster {
+  gap: clamp(12px, 2vw, 18px);
+}
+
+.works-strip--poster .works-strip-item img {
+  aspect-ratio: 16 / 9;
+}
+
 .works-strip-item span {
   display: block;
   padding: 8px 10px;

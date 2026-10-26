@@ -5,14 +5,14 @@
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 
-{{- $works := where site.Data.works.items "kind" "video" }}
+{{- $works := where site.Data.works.items "kind" "poster" }}
 {{- if $works }}
 <div class="home-recent">
   <div class="home-recent-head">
     <h2>🎬 作品</h2>
     <a href="{{ "/works/" | relURL }}">全部作品 →</a>
   </div>
-  <div class="works-strip">
+  <div class="works-strip works-strip--poster">
     {{- range first 3 $works }}
     <a class="works-strip-item" href="{{ if .link }}{{ .link | relURL }}{{ else }}{{ "/works/" | relURL }}{{ end }}">
       <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
