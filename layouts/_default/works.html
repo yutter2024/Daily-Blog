@@ -5,23 +5,33 @@
   {{- with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
 </header>
 
+{{- $videos := where site.Data.works.items "kind" "video" }}
+{{- $posters := where site.Data.works.items "kind" "poster" }}
+
+<h2 class="works-h2">视频作品</h2>
+<p class="works-h2-desc">{{ len $videos }} 支 · 4 期 AI 科普 + 1 支竖屏短片</p>
+
 {{- $sections := slice
       (dict "key" "科普" "title" "AI 观察笔记 · 科普系列" "desc" "3–5 分钟，一期讲一个 AI 的认知缺陷。")
       (dict "key" "短片" "title" "短片与实验" "desc" "竖屏、几十秒，练镜头和声音。")
-      (dict "key" "海报" "title" "海报" "desc" "AI 只画画面，中文靠排版。")
 -}}
-
 {{- range $sections }}
-{{- $items := where site.Data.works.items "series" .key }}
+{{- $items := where $videos "series" .key }}
 {{- if $items }}
-<section class="works-series">
-  <h2 class="works-series-title">{{ .title }}</h2>
-  <p class="works-series-desc">{{ .desc }}</p>
-</section>
-<section class="works-grid">
+<h3 class="works-series-title">{{ .title }}</h3>
+<p class="works-series-desc">{{ .desc }}</p>
+<div class="works-grid">
   {{- range $items }}{{ partial "works-card.html" . }}{{ end }}
-</section>
+</div>
 {{- end }}
+{{- end }}
+
+{{- if $posters }}
+<h2 class="works-h2">海报作品</h2>
+<p class="works-h2-desc">{{ len $posters }} 张 · AI 出画面，中文靠排版</p>
+<div class="works-grid works-grid--poster">
+  {{- range $posters }}{{ partial "works-card.html" . }}{{ end }}
+</div>
 {{- end }}
 
 <script>

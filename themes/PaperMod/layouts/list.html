@@ -5,7 +5,7 @@
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 
-{{- $works := site.Data.works.items }}
+{{- $works := where site.Data.works.items "kind" "video" }}
 {{- if $works }}
 <div class="home-recent">
   <div class="home-recent-head">
