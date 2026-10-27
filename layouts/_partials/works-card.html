@@ -1,9 +1,9 @@
 {{- $item := . }}
 {{- $poster := eq .kind "poster" }}
-{{- $href := "" }}
-{{- if $poster }}{{ $href = .full | default .cover }}{{ else }}{{ $href = .link }}{{ end }}
+{{- $open := "" }}
+{{- if $poster }}{{ $open = .full | default .cover }}{{ else }}{{ $open = .highlight }}{{ end }}
 <article class="work-card">
-  {{- if $href }}<a class="work-thumb{{ if $poster }} work-zoom{{ end }}" href="{{ $href | relURL }}"{{ if $poster }} target="_blank" rel="noopener" data-zoom{{ end }} aria-label="{{ .title }}{{ if $poster }} · 点击查看原图{{ end }}">
+  {{- if $open }}<a class="work-thumb{{ if $poster }} work-zoom{{ else }} work-open{{ end }}" href="{{ $open | relURL }}" target="_blank" rel="noopener" {{ if $poster }}data-zoom{{ else }}data-video{{ end }} data-title="{{ .title }}" aria-label="{{ .title }}{{ if $poster }} · 点击查看原图{{ else }} · 播放精彩片段{{ end }}">
   {{- else }}<div class="work-thumb">{{ end }}
     <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
     {{- with .preview }}
@@ -12,7 +12,7 @@
     <span class="work-play" aria-hidden="true">▶</span>
     {{- end }}
     {{- if $poster }}<span class="work-zoom-hint" aria-hidden="true">⤢</span>{{ end }}
-  {{- if $href }}</a>{{ else }}</div>{{ end }}
+  {{- if $open }}</a>{{ else }}</div>{{ end }}
   <div class="work-body">
     <div class="work-meta">
       <span class="work-type">{{ .type }}</span>
