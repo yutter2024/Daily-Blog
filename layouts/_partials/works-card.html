@@ -1,6 +1,9 @@
 {{- $item := . }}
+{{- $poster := eq .kind "poster" }}
+{{- $href := "" }}
+{{- if $poster }}{{ $href = .full | default .cover }}{{ else }}{{ $href = .link }}{{ end }}
 <article class="work-card">
-  {{- if .link }}<a class="work-thumb" href="{{ .link | relURL }}" aria-label="{{ .title }}">
+  {{- if $href }}<a class="work-thumb{{ if $poster }} work-zoom{{ end }}" href="{{ $href | relURL }}"{{ if $poster }} target="_blank" rel="noopener" data-zoom{{ end }} aria-label="{{ .title }}{{ if $poster }} · 点击查看原图{{ end }}">
   {{- else }}<div class="work-thumb">{{ end }}
     <img src="{{ .cover | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
     {{- with .preview }}
@@ -8,14 +11,15 @@
            muted loop playsinline preload="none" aria-hidden="true"></video>
     <span class="work-play" aria-hidden="true">▶</span>
     {{- end }}
-  {{- if .link }}</a>{{ else }}</div>{{ end }}
+    {{- if $poster }}<span class="work-zoom-hint" aria-hidden="true">⤢</span>{{ end }}
+  {{- if $href }}</a>{{ else }}</div>{{ end }}
   <div class="work-body">
     <div class="work-meta">
       <span class="work-type">{{ .type }}</span>
       <span class="work-date">{{ .date }}</span>
     </div>
     <h2 class="work-title">
-      {{- if .link }}<a href="{{ .link | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end -}}
+      {{- if and .link (not $poster) }}<a href="{{ .link | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end -}}
     </h2>
     {{- with .note }}<p class="work-note">{{ . }}</p>{{ end }}
   </div>

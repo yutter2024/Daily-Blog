@@ -1,0 +1,54 @@
+{{- /* 作品墙海报：点击打开原图预览（页面上没有 .work-zoom 时脚本自动退出） */}}
+<script>
+(function () {
+  var links = document.querySelectorAll('.work-zoom');
+  if (!links.length || document.querySelector('.zoom-layer')) return;
+
+  var layer = document.createElement('div');
+  layer.className = 'zoom-layer';
+  layer.setAttribute('role', 'dialog');
+  layer.setAttribute('aria-label', '原图预览');
+  layer.innerHTML = '<button class="zoom-close" type="button" aria-label="关闭">✕</button>' +
+                    '<a class="zoom-src" href="#" target="_blank" rel="noopener">查看原图 ↗</a>' +
+                    '<img alt="">';
+  document.body.appendChild(layer);
+
+  var img = layer.querySelector('img');
+  var src = layer.querySelector('.zoom-src');
+  var closeBtn = layer.querySelector('.zoom-close');
+  var lastFocus = null;
+
+  function open(href, alt) {
+    img.src = href;
+    img.alt = alt || '';
+    src.href = href;
+    layer.classList.add('is-open');
+    document.body.classList.add('zoom-lock');
+    lastFocus = document.activeElement;
+    closeBtn.focus();
+  }
+
+  function close() {
+    layer.classList.remove('is-open');
+    document.body.classList.remove('zoom-lock');
+    img.removeAttribute('src');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  Array.prototype.forEach.call(links, function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      open(a.getAttribute('href'), a.getAttribute('aria-label'));
+    });
+  });
+
+  layer.addEventListener('click', function (e) {
+    if (e.target === layer || e.target === closeBtn) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && layer.classList.contains('is-open')) close();
+  });
+})();
+</script>

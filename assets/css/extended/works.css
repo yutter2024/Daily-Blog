@@ -252,3 +252,101 @@
   font-size: 0.74rem;
   white-space: nowrap;
 }
+
+/* ---------- 海报：点击看原图 ---------- */
+.work-zoom {
+  cursor: zoom-in;
+  position: relative;
+}
+
+.work-zoom-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.work-zoom:hover .work-zoom-hint,
+.work-zoom:focus-visible .work-zoom-hint {
+  opacity: 1;
+}
+
+.zoom-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 44px);
+  background: rgba(8, 8, 10, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.zoom-layer.is-open {
+  display: flex;
+}
+
+.zoom-layer img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  animation: zoom-in 0.18s ease-out;
+}
+
+@keyframes zoom-in {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.zoom-close,
+.zoom-src {
+  position: absolute;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.zoom-close {
+  top: clamp(10px, 2vw, 22px);
+  right: clamp(10px, 2vw, 22px);
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.zoom-src {
+  bottom: clamp(10px, 2vw, 22px);
+  right: clamp(10px, 2vw, 22px);
+  opacity: 0.8;
+}
+
+.zoom-src:hover {
+  opacity: 1;
+}
+
+body.zoom-lock {
+  overflow: hidden;
+}

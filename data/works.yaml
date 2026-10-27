@@ -48,6 +48,7 @@ items:
     series: "海报"
     date: "2026.10"
     cover: "/images/works/poster-t1-worlds.jpg"
+    full: "/images/works/poster-t1-worlds-full.jpg"
     note: "2025 世界赛 · 成都东安湖 · 队史第六冠"
   - title: "2026 世界杯 · 冠军西班牙"
     kind: "poster"
@@ -55,4 +56,5 @@ items:
     series: "海报"
     date: "2026.10"
     cover: "/images/works/poster-worldcup-2026.jpg"
+    full: "/images/works/poster-worldcup-2026-full.jpg"
     note: "决赛 1-0 阿根廷 · 加时 106′ · 新泽西"
