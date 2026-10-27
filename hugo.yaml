@@ -62,7 +62,7 @@ params:
     - name: email
       url: "mailto:yutter@yutterx.com"
   label:
-    text: "Yutter的日常"
+    text: "Yutter"
     icon: "/favicon.svg"
     iconHeight: 28
 

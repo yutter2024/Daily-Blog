@@ -613,3 +613,26 @@ details.toc .toc a.active {
 [data-theme="dark"] details.toc .toc a.active {
   color: #4ca6ff;
 }
+
+/* ---------- 站名字标：Manrope ---------- */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/manrope-700.woff2") format("woff2");
+}
+
+.header .logo a {
+  font-family: "Manrope", "Segoe UI Variable Display", "Segoe UI", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  letter-spacing: -0.032em;
+  column-gap: 0.5rem;
+}
+
+.header .logo a img {
+  height: 27px;
+  width: 27px;
+}
