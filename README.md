@@ -27,16 +27,12 @@
 ## 📚 内容索引
 
 <!-- POSTS:START -->
-> 共 **21** 篇 · 按发布时间倒序 · 本表由 `scripts/update_readme.py` 自动生成
+> 共 **17** 篇 · 按发布时间倒序 · 本表由 `scripts/update_readme.py` 自动生成
 
 | 日期 | 文章 | 分类 | 类型 |
 |---|---|---|---|
 | 2026-10-23 | [把博客、视频、海报都交给 AI：我的三条生产线](https://yutterx.com/posts/my-ai-workflow/) | AI与工具 | 复盘 |
-| 2026-10-23 | [AI 分得清左右吗？](https://yutterx.com/posts/ai-left-right/) | AI与工具 | 复盘 |
-| 2026-10-23 | [AI 分不清星期几？](https://yutterx.com/posts/ai-weekday/) | AI与工具 | 复盘 |
 | 2026-10-23 | [AI 做海报的分工：画面交给模型，中文交给排版](https://yutterx.com/posts/ai-poster-workflow/) | AI与工具 | 教程 |
-| 2026-10-23 | [AI 为什么数不清数？从 strawberry 说起](https://yutterx.com/posts/ai-count-strawberry/) | AI与工具 | 复盘 |
-| 2026-10-23 | [AI 为什么把图画错？从六根手指说起](https://yutterx.com/posts/ai-six-fingers/) | AI与工具 | 复盘 |
 | 2026-10-23 | [16 秒的 AI 短片：4 个镜头，从豆包到成片](https://yutterx.com/posts/ai-short-film-16s/) | AI与工具 | 教程 |
 | 2026-09-30 | [Hermes Agent 官方文档中文摘要](https://yutterx.com/posts/hermes-docs-summary/) | AI与工具 | 教程 |
 | 2026-09-18 | [英伟达发家史：从显卡到 AI 基础设施](https://yutterx.com/posts/nvidia-rising/) | 科技观察 | 复盘 |
