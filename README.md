@@ -4,7 +4,7 @@
 
 **记录日常、AI、教程与折腾的个人博客**
 
-<a href="https://yutterx.com/works/"><img src="static/images/works/poster-t1-worlds.jpg" alt="T1 · 世界赛第六冠" width="49%"></a> <a href="https://yutterx.com/works/"><img src="static/images/works/poster-worldcup-2026.jpg" alt="2026 世界杯 · 冠军西班牙" width="49%"></a>
+<a href="https://yutterx.com/works/"><img src="static/images/works/poster-t1-worlds.jpg" alt="T1 · 世界赛第六冠" width="32%"></a> <a href="https://yutterx.com/works/"><img src="static/images/works/poster-worldcup-2026.jpg" alt="2026 世界杯 · 冠军西班牙" width="32%"></a> <a href="https://yutterx.com/works/"><img src="static/images/works/poster-phantom-blade-zero.jpg" alt="影之刃零 · Phantom Blade Zero" width="32%"></a>
 
 [🌐 yutterx.com](https://yutterx.com)&nbsp;·&nbsp;[🎬 作品墙](https://yutterx.com/works/)&nbsp;·&nbsp;[📚 文章](https://yutterx.com/posts/)&nbsp;·&nbsp;[🗂 分类](https://yutterx.com/categories/)&nbsp;·&nbsp;[✉️ 写信](mailto:yutter@yutterx.com)
 
@@ -17,7 +17,7 @@
 
 ## 🎬 作品
 
-视频 5 支 · 海报 2 张，全在 [作品墙](https://yutterx.com/works/)：视频点开就播最精彩的一段（带声音），海报点开是 4K 原图。
+视频 5 支 · 海报 3 张，全在 [作品墙](https://yutterx.com/works/)：视频点开就播最精彩的一段（带声音），海报点开是 4K 原图。
 
 ## 📚 内容索引
 

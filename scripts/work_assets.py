@@ -39,6 +39,17 @@ PREVIEW_W, PREVIEW_SEC = 540, 4.5
 HL_W, HL_CRF = 1280, 26
 
 
+def hugo_bin():
+    """Windows 上 hugo 可能是无扩展名的 `~/bin/hugo`，subprocess 按 PATH 找不到。"""
+    cands = [shutil.which("hugo"), shutil.which("hugo.exe")]
+    home = os.path.expanduser("~")
+    cands += [os.path.join(home, "bin", "hugo.exe"), os.path.join(home, "bin", "hugo")]
+    for c in cands:
+        if c and os.path.exists(c):
+            return c
+    return "hugo"
+
+
 def run(cmd):
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
@@ -209,7 +220,10 @@ def check(build=False):
     print("\n共 %d 条：视频 %d / 海报 %d，问题 %d" % (len(items), videos, posters, problems))
     if build:
         print("\n构建中…")
-        run(["hugo", "--minify", "--cleanDestinationDir"])
+        try:
+            run([hugo_bin(), "--minify", "--cleanDestinationDir"])
+        except FileNotFoundError:
+            sys.exit("找不到 hugo 可执行文件：把 hugo 放进 PATH，或用 HUGO_BIN 指定完整路径")
         print("构建通过")
     return problems
 
