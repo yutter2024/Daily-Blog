@@ -2,6 +2,7 @@
 title: "AI 知识总览：从图灵测试到 Agent，一条线串完"
 date: 2026-11-01
 posttype: "教程"
+homeblock: tutorial
 summary: "从 1950 年图灵的一个问题，到能替你干活的 Agent——两次寒冬、三样燃料、一个关键年份，再加上 12 个必须弄懂的词，串成一条能看懂的线。"
 draft: false
 slug: "ai-overview"
