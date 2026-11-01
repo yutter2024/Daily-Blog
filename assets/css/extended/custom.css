@@ -248,11 +248,10 @@ code {
   line-height: 1.6;
 }
 
-/* 表格：表头底色、细边线、手机端可横滑 */
+/* 表格：表头底色、细边线、满宽；单元格可断行，避免手机溢出 */
 .post-content table {
   width: 100%;
-  display: block;
-  overflow-x: auto;
+  display: table;
   border-collapse: collapse;
   font-size: 0.95em;
 }
@@ -267,12 +266,16 @@ code {
 .post-content td {
   border: 1px solid var(--border);
   padding: 0.55em 0.75em;
+  overflow-wrap: anywhere;
 }
 
 /* 图片：圆角与居中 */
 .post-content img {
   border-radius: 10px;
   max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 分隔线：更轻 */
