@@ -22,10 +22,11 @@
 ## 📚 内容索引
 
 <!-- POSTS:START -->
-> 共 **18** 篇 · 按发布时间倒序 · 本表由 `scripts/update_readme.py` 自动生成
+> 共 **19** 篇 · 按发布时间倒序 · 本表由 `scripts/update_readme.py` 自动生成
 
 | 日期 | 文章 | 分类 | 类型 |
 |---|---|---|---|
+| 2026-11-08 | [ComfyUI 教程：读懂节点、采样器和三套放大工作流](https://yutterx.com/posts/comfyui-basics/) | AI与工具 | 教程 |
 | 2026-11-01 | [AI 知识总览：从图灵测试到 Agent，一条线串完](https://yutterx.com/posts/ai-overview/) | AI与工具 | 教程 |
 | 2026-10-23 | [把博客、视频、海报都交给 AI：我的三条生产线](https://yutterx.com/posts/my-ai-workflow/) | AI与工具 | 复盘 |
 | 2026-10-23 | [AI 做海报的分工：画面交给模型，中文交给排版](https://yutterx.com/posts/ai-poster-workflow/) | AI与工具 | 教程 |
